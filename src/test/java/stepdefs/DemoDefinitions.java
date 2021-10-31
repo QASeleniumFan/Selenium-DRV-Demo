@@ -118,9 +118,12 @@ public class DemoDefinitions {
 
             //Clicking on the first element
             String temp =listofItems.get(i-1).getAttribute("href");
-
+            listofItems.get(i-1).click();
+            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            System.out.print(i + " element clicked\t--");
+            System.out.println("pass");
             System.out.println(temp);
-
+            driver.navigate().back();
         }
 
     }
