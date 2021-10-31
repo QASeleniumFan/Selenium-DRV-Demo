@@ -104,6 +104,7 @@ public class DemoDefinitions {
     public void iShouldBeAbleToNavigateToEachLink() {
 
         List <WebElement> listofItems = driver.findElements(By.xpath("//*[@class='button  button--icon button--small']"));
+
         WebDriverWait wait = new WebDriverWait(driver, 20); //Wait time of 20 seconds
         for (int i=1; i<=listofItems.size(); i++)
         {
